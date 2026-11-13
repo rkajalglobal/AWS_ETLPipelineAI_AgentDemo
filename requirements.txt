@@ -1,0 +1,13 @@
+boto3
+python-dotenv
+langchain
+langchain-core
+langchain-aws
+langgraph
+streamlit
+pandas
+sqlglot
+awswrangler
+pydantic 
+langgraph-checkpoint-sqlite
+duckdb

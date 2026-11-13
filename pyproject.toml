@@ -1,0 +1,31 @@
+[project]
+name = "aws-ai-etlpipelineagentdemo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ruchi Kajal", email = "rkajalglobal@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "awswrangler>=3.18.0",
+    "boto3>=1.43.124",
+    "duckdb>=2.0.0",
+    "langchain>=1.4.9",
+    "langchain-aws>=1.9.1",
+    "langchain-core>=1.7.6",
+    "langgraph>=1.2.20",
+    "langgraph-checkpoint-sqlite>=3.1.3",
+    "pandas>=3.1.1",
+    "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
+    "sqlglot>=30.29.0",
+    "streamlit>=1.66.1",
+]
+
+[project.scripts]
+aws-ai-etlpipelineagentdemo = "aws_ai_etlpipelineagentdemo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"

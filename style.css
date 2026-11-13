@@ -1,0 +1,82 @@
+/* AWS Intelligent Data Engineering Agent — light coral theme */
+:root { --coral:#f6a6aa; --coral-deep:#c95e68; --ink:#382c35; --paper:#fff9f9; --line:#f1d8dc; }
+.stApp { background:linear-gradient(155deg,#fffafa 0%,#fff3f4 60%,#fffaf7 100%); color:var(--ink); }
+[data-testid="stSidebar"] { background:#fff3f4; border-right:1px solid var(--line); }
+[data-testid="stHeader"] { background:rgba(255,250,250,.92); }
+.block-container { padding-top:1.1rem; padding-bottom:6rem; max-width:1250px; }
+h1,h2,h3 { color:#713841 !important; }
+.aws-hero { border:1px solid #f1c9ce; border-radius:20px; background:linear-gradient(120deg,#fff 10%,#ffe2e5 100%); padding:18px 22px; box-shadow:0 8px 25px #a75a6315; margin-bottom:14px; display:flex; align-items:center; gap:16px; }
+.aws-hero-title { font-size:1.65rem; font-weight:800; color:#713841; line-height:1.2; }
+.aws-hero-sub { color:#8b5962; font-size:.91rem; }
+.aws-cloud { font-size:2.2rem; display:inline-block; animation:aws-float 3s ease-in-out infinite; }
+.aws-agent { font-size:2rem; display:inline-block; animation:agent-pulse 2s ease-in-out infinite; }
+@keyframes aws-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes agent-pulse { 0%,100%{transform:scale(1) rotate(-3deg)} 50%{transform:scale(1.13) rotate(4deg)} }
+@media (prefers-reduced-motion: reduce) { .aws-cloud,.aws-agent{animation:none!important} }
+.stButton > button, .stDownloadButton > button { background:linear-gradient(145deg,#f9c3c6,#f2a1a8); color:#572b33; border:1px solid #df8992; border-radius:11px; font-weight:700; box-shadow:0 4px 0 #ca7c85; transition:transform .09s ease,box-shadow .09s ease,background .12s; }
+.stButton > button:hover,.stDownloadButton > button:hover { background:#f5a7ae; color:#572b33; border-color:#d47c85; }
+.stButton > button:active,.stDownloadButton > button:active { transform:translateY(4px); box-shadow:0 0 0 #ca7c85; }
+.stButton > button:focus-visible,.stDownloadButton > button:focus-visible { outline:3px solid #ba5968; outline-offset:2px; }
+[data-testid="stTabs"] button[role="tab"] { font-weight:700; color:#85525a; }
+[data-testid="stTabs"] button[aria-selected="true"] { color:#9f3e4e; border-bottom-color:#c85e6b; }
+[data-testid="stDataFrame"], [data-testid="stDataEditor"] { border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+[data-testid="stChatMessage"] { border:1px solid #f0d9dc; border-radius:15px; background:#fffdfd; margin-bottom:8px; }
+[data-testid="stChatInput"] { background:#fff9f9; border-radius:13px; }
+[data-testid="stExpander"] { border:1px solid var(--line); border-radius:10px; background:#fffdfd; }
+.aws-section { padding:10px 0 5px; font-size:1.13rem; font-weight:750; color:#7b414b; }
+.aws-muted { color:#90636b; font-size:.86rem; }
+.aws-badge { display:inline-block; padding:4px 10px; border-radius:999px; font-weight:700; font-size:.82rem; background:#ffe1e4; color:#85434f; }
+
+/* Connection indicator (matches the Snowflake-style status light) */
+.aws-connection { display:flex; align-items:center; gap:9px; font-size:.88rem; color:#673e47; padding:8px 2px 12px; overflow-wrap:anywhere; }
+.aws-dot { display:inline-block; width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+.aws-dot-green { background:#23b56d; box-shadow:0 0 0 3px #d6f5e4; animation:aws-status-pulse 2s infinite; }
+.aws-dot-red { background:#e34f5b; box-shadow:0 0 0 3px #ffe0e3; }
+.aws-dot-gray { background:#9ca3af; box-shadow:0 0 0 3px #edf0f3; }
+@keyframes aws-status-pulse { 50% { box-shadow:0 0 0 6px #d6f5e488; } }
+@media (prefers-reduced-motion: reduce) { .aws-dot-green { animation:none; } }
+
+/* Highly visible, self-contained AWS cloud and AI agent animations */
+.aws-hero { min-height:145px; gap:24px; overflow:hidden; position:relative; }
+.aws-heading { flex:1; min-width:0; }
+.aws-visual { width:112px; height:104px; position:relative; flex:0 0 112px; display:grid; place-items:center; background:radial-gradient(circle,#ffe0dc 0%,#fff4f2 68%,transparent 72%); border-radius:50%; }
+.aws-cloud-icon { width:94px; height:74px; z-index:2; animation:cloud-bob 2.4s ease-in-out infinite; filter:drop-shadow(0 8px 5px #ad56553b); }
+.aws-cloud-icon svg { width:100%; height:100%; }
+.aws-orbit { position:absolute; width:12px; height:12px; border-radius:50%; background:#ef8e59; box-shadow:0 0 0 5px #f9bb9c55; }
+.aws-orbit-one { animation:orbit-one 3.4s linear infinite; }
+.aws-orbit-two { width:9px; height:9px; background:#d45167; animation:orbit-two 4.1s linear infinite; }
+@keyframes cloud-bob { 0%,100%{transform:translateY(7px) rotate(-4deg)} 50%{transform:translateY(-10px) rotate(4deg)} }
+@keyframes orbit-one { 0%{transform:rotate(0deg) translateX(49px) rotate(0deg)} 100%{transform:rotate(360deg) translateX(49px) rotate(-360deg)} }
+@keyframes orbit-two { 0%{transform:rotate(180deg) translateX(43px)} 100%{transform:rotate(540deg) translateX(43px)} }
+.aws-bot { width:106px; height:110px; flex:0 0 106px; display:flex; flex-direction:column; align-items:center; justify-content:center; animation:bot-tilt 2.8s ease-in-out infinite; }
+.aws-bot-antenna { height:13px; width:5px; border-radius:4px; background:#b85064; position:relative; }
+.aws-bot-antenna:before { content:''; position:absolute; width:12px; height:12px; top:-8px; left:-4px; background:#f2a24c; border-radius:50%; box-shadow:0 0 10px 4px #ffbe78; animation:antenna-flash 1.4s ease-in-out infinite; }
+.aws-bot-face { width:85px; height:66px; background:linear-gradient(145deg,#e78d9a,#c45b72); border:3px solid #934459; border-radius:19px; box-shadow:0 7px 0 #a75264,0 11px 15px #b5636a55; display:flex; justify-content:space-evenly; align-items:center; position:relative; }
+.aws-bot-eye { display:block; width:17px; height:20px; background:#fff9fa; border-radius:8px; box-shadow:0 0 12px #fff; animation:bot-blink 3.5s infinite; }
+.aws-bot-mouth { position:absolute; width:24px; height:5px; background:#742b40; border-radius:5px; bottom:10px; }
+.aws-bot-label { font-size:10px; font-weight:900; color:#8c3e54; margin-top:8px; letter-spacing:1.4px; }
+@keyframes bot-tilt { 0%,100%{transform:translateY(4px) rotate(-6deg)} 50%{transform:translateY(-8px) rotate(6deg)} }
+@keyframes bot-blink { 0%,43%,51%,100%{transform:scaleY(1)} 47%{transform:scaleY(.12)} }
+@keyframes antenna-flash { 0%,100%{opacity:.4;box-shadow:0 0 3px 2px #ffbe78} 50%{opacity:1;box-shadow:0 0 13px 6px #ffbe78} }
+@media(max-width:650px) { .aws-hero{gap:9px;padding:12px}.aws-visual{width:70px;flex-basis:70px;transform:scale(.75)}.aws-bot{width:68px;flex-basis:68px;transform:scale(.8)}.aws-hero-title{font-size:1.15rem} }
+@media(prefers-reduced-motion:reduce) { .aws-cloud-icon,.aws-orbit,.aws-bot,.aws-bot-eye,.aws-bot-antenna:before{animation:none!important} }
+
+/* Pin both workspace chat inputs to the viewport bottom, including empty chats.
+   Inactive tab content remains hidden by Streamlit. */
+[data-testid="stTabs"] [data-testid="stChatInput"] {
+    position: fixed !important;
+    bottom: 14px !important;
+    left: max(calc(21rem + 18px), calc((100vw - 1250px)/2 + 18px));
+    right: 30px;
+    width: auto !important;
+    z-index: 1000;
+    background: #fffafa;
+    border: 1px solid #efc9d0;
+    box-shadow: 0 6px 28px #703d4d33;
+    border-radius: 16px;
+    padding: 5px;
+}
+[data-testid="stTabs"] [data-testid="stTabPanel"] { padding-bottom: 115px; }
+@media(max-width: 850px) {
+  [data-testid="stTabs"] [data-testid="stChatInput"] { left: 20px; right: 20px; bottom: 8px !important; }
+}
