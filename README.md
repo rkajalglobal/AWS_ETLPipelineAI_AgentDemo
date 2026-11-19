@@ -6,7 +6,7 @@ MedQuery AI allows users to interact with structured databases using natural lan
 
 ## Key Features
 
-- **Natural Language to SQL:** Converts user questions into SQL using Amazon Bedrock (Nova Micro).
+- **Natural Language to SQL:** Converts user questions into SQL using Amazon Bedrock (Claude-Sonnet-5.5).
 - **Intelligent SQL Agent:** Executes SELECT queries automatically and requires human approval for UPDATE and DELETE operations.
 - **Conversation Context:** Remembers previously selected records for follow-up database modifications.
 - **CSV Workspace:** Supports CSV editing, column management, bulk transformations, and schema validation.
