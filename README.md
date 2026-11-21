@@ -78,3 +78,4 @@ CSV Upload --→ Edit/Transform --→ Schema Validation
 
 Demonstrate an end-to-end AI-assisted data engineering workflow combining natural-language SQL generation, dynamic schema handling, data transformation, database operations, and human-in-the-loop approval.
 
+Streamlit Cloud URL:  https://awsetlpipelineaiagentdemo-jykzv95etf4qxlnbxvfaup.streamlit.app/
